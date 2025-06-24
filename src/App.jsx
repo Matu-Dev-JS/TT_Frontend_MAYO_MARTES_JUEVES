@@ -18,6 +18,7 @@ const App = () => {
                 <Route element={<AuthProtectRoute/>} >
                     <Route path='/home' element={<HomeScreen />}/>
                     <Route path='/workspaces/:workspace_id' element={<WorkspaceDetailScreen />}/>
+                    <Route path='/workspaces/:workspace_id/channels/:channel_id' element={<WorkspaceDetailScreen />}/>
                 </Route>
                 
             </Routes>
