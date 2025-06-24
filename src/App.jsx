@@ -4,6 +4,8 @@ import LoginScreen from './Screens/LoginScreen/LoginScreen'
 import RegisterScreen from './Screens/RegisterScreen/RegisterScreen'
 import HomeScreen from './Screens/HomeScreen/HomeScreen'
 import AuthProtectRoute from './Components/AuthProtectRoute/AuthProtectRoute'
+import WorkspaceDetailScreen from './Screens/WorkspaceDetailScreen/WorkspaceDetailScreen'
+
 
 const App = () => {
   
@@ -15,6 +17,7 @@ const App = () => {
                 <Route path='/register' element={<RegisterScreen />}/>
                 <Route element={<AuthProtectRoute/>} >
                     <Route path='/home' element={<HomeScreen />}/>
+                    <Route path='/workspaces/:workspace_id' element={<WorkspaceDetailScreen />}/>
                 </Route>
                 
             </Routes>

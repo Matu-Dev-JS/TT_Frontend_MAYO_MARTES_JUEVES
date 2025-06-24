@@ -27,7 +27,8 @@ const HomeScreen = () => {
     }, 
     []
   )
-  console.log({loading, response})
+
+
   return (
     <div>
       <h1>Tus espacios de trabajo</h1>
@@ -40,9 +41,9 @@ const HomeScreen = () => {
               response.data.workspaces.map(
                 (element) => {
                   return (
-                    <div>
+                    <div key={element.workspace._id}>
                       <h2>{element.workspace.name}</h2>
-                      <Link to={'/workspace/' + element.workspace._id}> Ir a espacio de trabajo </Link>
+                      <Link to={'/workspaces/' + element.workspace._id}> Ir a espacio de trabajo </Link>
                     </div>
                   )
                 }
