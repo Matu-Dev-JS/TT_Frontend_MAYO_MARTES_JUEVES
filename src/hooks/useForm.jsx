@@ -9,7 +9,8 @@ const useForm = ({onSubmit, initial_form_state}) => {
      const handleSubmit = async (event) => {
         event.preventDefault()
         onSubmit()
-        
+        /* Reseteamos el formulario cuando se envia */
+        setFormState(initial_form_state)
     }
 
     const handleChange = (event) => {
