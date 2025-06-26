@@ -32,6 +32,9 @@ const HomeScreen = () => {
   return (
     <div>
       <h1>Tus espacios de trabajo</h1>
+      <Link to={'/new'}>
+        Crear espacio de trabajo
+      </Link>
       <div>
         {
           loading 
